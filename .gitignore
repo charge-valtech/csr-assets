@@ -3,6 +3,5 @@
 node_modules/**
 *.DS_Store
 *.map
-screens/**
-screens-mob/**
+_compiled/**
 
