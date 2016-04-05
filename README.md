@@ -2,13 +2,13 @@
 
 This is where the frontend assets for the CSR Fast Track and Fast Stream projects live.
 
-You'll need to have npm and grunt installed on your machine.
+You'll need to have [npm](https://docs.npmjs.com/getting-started/installing-node) and [grunt](http://gruntjs.com/getting-started) installed on your machine.
 
 ## Prototyping
 
 ### CSS
 
-Don't run grunt from here, instead clone this repo into the same parent as your prototype lives, and point to ../csr-assets/scss to watch for changes. You should just end up with compiled CSS in your prototype's assets.
+Don't run grunt from here, instead clone this repo into the same parent as your prototype lives, and point to ../csr-assets/scss to watch for changes. Make your .scss changes in this repo and when you save it should update in your prototype. You should just end up with compiled CSS in your prototype's assets. 
 
 ### JS
 
