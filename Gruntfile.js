@@ -37,28 +37,28 @@ module.exports = function(grunt) {
                     sourceMap: true
                 },
                 files: {
-                    'www/_assets/css/main.css': 'scss/main.scss',
-                    'www/_assets/css/main-ie8.css': 'scss/main-ie8.scss'
+                    '_compiled/css/main.css': 'scss/main.scss',
+                    '_compiled/css/main-ie8.css': 'scss/main-ie8.scss'
                 }
             }
         },
         watch: {
             options: {
-                livereload: 34892,
+                livereload: 35892,
                 spawn: false
             },
             css: {
-                files: ['../csr-assets/scss/**/*.scss'],
+                files: ['scss/**/*.scss'],
                 tasks: ['sass']
             },
             js: {
-                files: ['www/_assets/js/**/*.js', '!www/_assets/js/scripts.min.js', '!www/_assets/js/scripts.js'],
+                files: ['js/**/*.js', '!js/scripts.min.js', '!js/scripts.js'],
                 tasks: ['jshint', 'concat:dev']
             }
         },
         replace: {
           map: {
-            src: ['www/_assets/css/*.css'],
+            src: ['_compiled/css/*.css'],
             overwrite: true,
             replacements: [{
                 from: 'sourceMappingURL=main.css.map',
@@ -66,14 +66,6 @@ module.exports = function(grunt) {
             }, {
                 from: 'sourceMappingURL=main-ie8.css.map',
                 to: 'Map removed'
-            }]
-          },
-          scripts: {
-            src: ['www/apprentice/*.html', 'www/*.html'],
-            overwrite: true,
-            replacements: [{
-                from: 'scripts.js',
-                to: 'scripts.min.js'
             }]
           }
         },
@@ -98,9 +90,9 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-                    port: 7100,
-                    base: 'www',
-                    livereload: 34892,
+                    port: 7200,
+                    base: '/',
+                    livereload: 35892,
                     open: true
                 }
             }
