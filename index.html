@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CSR Patterns | Apply for a Civil Service apprenticeship</title>
+    <title>CSR Patterns | Civil Service Resourcing (FSET)</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -78,7 +78,7 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <div class="global-header__title beta"><a href="profile-home.html">Apply for a Civil Service apprenticeship</a></div>
+          <div class="global-header__title beta"><a href="/">Civil Service Resourcing (FSET)</a></div>
         </div>
       </div>
     </header>    <div class="content-container">
@@ -106,18 +106,438 @@
         </div>
       </div>
       <main role="main" id="main">
+        <h1 class="heading-xlarge">CSR Patterns</h1>
         
 
-<h1 class="heading-xlarge">CSR Patterns</h1>
-<h2 class="heading-large">Choose a service</h2>
-<ul class="form-group">
-  <li>
-    <a href="fasttrack/index.html">Apply for a Civil Service apprenticeship</a>
-  </li>
-  <li>
-    <a href="admin/signin.html">Service administration</a>
-  </li>
-</ul>
+<ol class="list-number list-flowing">
+  <li><a href="#buttons">Buttons and links</a></li>
+  <li><a href="#formControls">Form controls</a></li>
+  <li><a href="#errors">Errors/validation</a></li>
+  <li><a href="#navigation">Navigation</a></li>
+  <li><a href="#typography">Typography</a></li>
+  <li><a href="#gridSystem">Grid system</a></li>
+  <!-- <li><a href="#tables">Tabular data</a></li> -->
+</ol>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="buttons">Buttons and links</h2>
+  <div><div class="form-group">
+  <button class="button">Primary</button>
+  <button class="button-link">Secondary</button>
+  <div id="get-started" class="get-started">
+    <a href="#" rel="" data-transaction-slug="" class="button">Start now</a>
+      <span class="destination"> to do something</span>
+  </div>
+</div>
+<p>
+  <a href="#">Normal link</a>
+</p>
+<p>
+  <a href="www.google.com" rel="external">External link</a>
+</p></div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint"><div class="form-group">
+  <button class="button">Primary</button>
+  <button class="button-link">Secondary</button>
+  <div id="get-started" class="get-started">
+    <a href="#" rel="" data-transaction-slug="" class="button">Start now</a>
+      <span class="destination"> to do something</span>
+  </div>
+</div>
+<p>
+  <a href="#">Normal link</a>
+</p>
+<p>
+  <a href="www.google.com" rel="external">External link</a>
+</p></xmp>
+  </details>
+</section>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="formControls">Form controls</h2>
+  <div><div class="form-group validation-summary-errors toggle-content">
+  <h3 class="heading-small">You have the following errors</h3>
+  <ul>
+    <li><a href="#error1">You haven't filled in this input</a></li>
+    <li><a href="#error2">You haven't entered a date of birth</a></li>
+  </ul>
+</div>
+
+<div id="error1" class="form-group has-an-error">
+  <label for="normal-label" class="form-label">Label for input</label>
+  <span class="has-error"></span>
+  <input type="text" id="normal-label" class="form-control">
+</div>
+
+<div class="form-group">
+  <label for="hint-label" class="form-label">Label with a hint</label>
+  <span class="form-hint">I'm the hint ;-)</span>
+  <input type="text" id="hint-label" class="form-control">
+</div>
+
+<div class="form-group">
+  <label for="normal-textarea" class="form-label">Label for textarea</label>
+  <textarea type="text" id="normal-textarea" class="form-control"></textarea>
+</div>
+
+<div id="error2" class="form-group form-group-compound inline-fixed has-an-error">
+  <p class="form-label">Date of birth</p>
+  <div class="has-error"></div>
+  <div class="form-group form-group-compound">
+    <label class="form-hint" for="date-day2">Day</label>
+    <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="date-day2">
+  </div>
+  <div class="form-group form-group-compound">
+    <label class="form-hint" for="date-month2">Month</label>
+    <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="date-month2">
+  </div>
+  <div class="form-group form-group-compound form-group-year">
+    <label class="form-hint" for="date-year2">Year</label>
+    <input type="tel" class="form-control form-control-small" maxlength="4" id="date-year2">
+  </div>
+</div>
+
+<div class="inline-fixed">
+  <div class="form-group">
+    <label for="subject-grade" class="form-label">Inline</label>
+    <input type="text" class="form-control form-control-medium" id="subject-grade">
+  </div>
+  <div class="form-group">
+    <label for="subject-year" class="form-label">Another</label>
+    <input maxlength="4" type="tel" class="form-control form-control-medium" id="subject-year">
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="select-example" class="form-label">Select dropdown</label>
+  <select name="" id="select-example">
+    <option value="">Select from a list</option>
+    <option value="">I'm in a list</option>
+  </select>
+</div>
+
+<div class="form-group inline">
+  <p class="form-label">Chunky radios inline</p>
+  <label for="pref-email" class="block-label">
+    <input name="preference" type="radio" id="pref-email">Email
+  </label>
+  <label for="pref-tel" class="block-label">
+    <input name="preference" type="radio" id="pref-tel">Telephone
+  </label>
+  <label for="pref-post" class="block-label">
+    <input name="preference" type="radio" id="pref-post">Post
+  </label>
+</div>
+
+<p>Chunky checkboxes</p>
+<div class="form-group">
+  <label for="weekday1" class="block-label"><input id="weekday1" type="checkbox">Monday</label>
+  <label for="weekday2" class="block-label"><input id="weekday2" type="checkbox">Tuesday</label>
+  <label for="weekday3" class="block-label"><input id="weekday3" type="checkbox">Wednesday</label>
+  <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thursday</label>
+  <label for="weekday5" class="block-label"><input id="weekday5" type="checkbox">Friday</label>
+</div></div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint"><div class="form-group validation-summary-errors toggle-content">
+  <h3 class="heading-small">You have the following errors</h3>
+  <ul>
+    <li><a href="#error1">You haven't filled in this input</a></li>
+    <li><a href="#error2">You haven't entered a date of birth</a></li>
+  </ul>
+</div>
+
+<div id="error1" class="form-group has-an-error">
+  <label for="normal-label" class="form-label">Label for input</label>
+  <span class="has-error"></span>
+  <input type="text" id="normal-label" class="form-control">
+</div>
+
+<div class="form-group">
+  <label for="hint-label" class="form-label">Label with a hint</label>
+  <span class="form-hint">I'm the hint ;-)</span>
+  <input type="text" id="hint-label" class="form-control">
+</div>
+
+<div class="form-group">
+  <label for="normal-textarea" class="form-label">Label for textarea</label>
+  <textarea type="text" id="normal-textarea" class="form-control"></textarea>
+</div>
+
+<div id="error2" class="form-group form-group-compound inline-fixed has-an-error">
+  <p class="form-label">Date of birth</p>
+  <div class="has-error"></div>
+  <div class="form-group form-group-compound">
+    <label class="form-hint" for="date-day2">Day</label>
+    <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="date-day2">
+  </div>
+  <div class="form-group form-group-compound">
+    <label class="form-hint" for="date-month2">Month</label>
+    <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="date-month2">
+  </div>
+  <div class="form-group form-group-compound form-group-year">
+    <label class="form-hint" for="date-year2">Year</label>
+    <input type="tel" class="form-control form-control-small" maxlength="4" id="date-year2">
+  </div>
+</div>
+
+<div class="inline-fixed">
+  <div class="form-group">
+    <label for="subject-grade" class="form-label">Inline</label>
+    <input type="text" class="form-control form-control-medium" id="subject-grade">
+  </div>
+  <div class="form-group">
+    <label for="subject-year" class="form-label">Another</label>
+    <input maxlength="4" type="tel" class="form-control form-control-medium" id="subject-year">
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="select-example" class="form-label">Select dropdown</label>
+  <select name="" id="select-example">
+    <option value="">Select from a list</option>
+    <option value="">I'm in a list</option>
+  </select>
+</div>
+
+<div class="form-group inline">
+  <p class="form-label">Chunky radios inline</p>
+  <label for="pref-email" class="block-label">
+    <input name="preference" type="radio" id="pref-email">Email
+  </label>
+  <label for="pref-tel" class="block-label">
+    <input name="preference" type="radio" id="pref-tel">Telephone
+  </label>
+  <label for="pref-post" class="block-label">
+    <input name="preference" type="radio" id="pref-post">Post
+  </label>
+</div>
+
+<p>Chunky checkboxes</p>
+<div class="form-group">
+  <label for="weekday1" class="block-label"><input id="weekday1" type="checkbox">Monday</label>
+  <label for="weekday2" class="block-label"><input id="weekday2" type="checkbox">Tuesday</label>
+  <label for="weekday3" class="block-label"><input id="weekday3" type="checkbox">Wednesday</label>
+  <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thursday</label>
+  <label for="weekday5" class="block-label"><input id="weekday5" type="checkbox">Friday</label>
+</div></xmp>
+  </details>
+</section>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="typography">Typography</h2>
+  <div>
+<h1 class="heading-xlarge">Heading 1 - X Large</h1>
+<h2 class="heading-large">Heading 2 - Large</h2>
+<h3 class="heading-medium">Heading 3 - Medium</h3>
+<h4 class="heading-small">Heading 4 - Small</h4>
+<p class="lead">Lead text - 24px</p>
+<p class="text">
+  Normal copy text is 19px and has a maximum width. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?
+</p>
+<p class="copy-16">Smaller text can be used and will be 16px</p></div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint">
+<h1 class="heading-xlarge">Heading 1 - X Large</h1>
+<h2 class="heading-large">Heading 2 - Large</h2>
+<h3 class="heading-medium">Heading 3 - Medium</h3>
+<h4 class="heading-small">Heading 4 - Small</h4>
+<p class="lead">Lead text - 24px</p>
+<p class="text">
+  Normal copy text is 19px and has a maximum width. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?
+</p>
+<p class="copy-16">Smaller text can be used and will be 16px</p></xmp>
+  </details>
+</section>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="gridSystem">Grid system</h2>
+  <div><div class="grid-wrapper">
+  <div class="grid grid-1-2">
+    <div class="inner-block-padr">
+      <p>Half width - 1/2</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-2">
+    <div class="inner-block-padr">
+      <p>Half width - 1/2</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-2-3">
+    <div class="inner-block-padr">
+      <p>Two third width - 2/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-3-4">
+    <div class="inner-block-padr">
+      <p>Three quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div></div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint"><div class="grid-wrapper">
+  <div class="grid grid-1-2">
+    <div class="inner-block-padr">
+      <p>Half width - 1/2</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-2">
+    <div class="inner-block-padr">
+      <p>Half width - 1/2</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-2-3">
+    <div class="inner-block-padr">
+      <p>Two third width - 2/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <p>Third width - 1/3</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid grid-3-4">
+    <div class="inner-block-padr">
+      <p>Three quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <p>Quarter width - 1/4</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+    </div>
+  </div>
+</div></xmp>
+  </details>
+</section>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

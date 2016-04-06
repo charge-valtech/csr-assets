@@ -2,13 +2,52 @@
 pageTitle: CSR Patterns
 ---
 
-<h1 class="heading-xlarge">{{ pageTitle }}</h1>
-<h2 class="heading-large">Choose a service</h2>
-<ul class="form-group">
-  <li>
-    <a href="fasttrack/index.html">Apply for a Civil Service apprenticeship</a>
-  </li>
-  <li>
-    <a href="admin/signin.html">Service administration</a>
-  </li>
-</ul>
+<ol class="list-number list-flowing">
+  <li><a href="#buttons">Buttons and links</a></li>
+  <li><a href="#formControls">Form controls</a></li>
+  <li><a href="#errors">Errors/validation</a></li>
+  <li><a href="#navigation">Navigation</a></li>
+  <li><a href="#typography">Typography</a></li>
+  <li><a href="#gridSystem">Grid system</a></li>
+  <!-- <li><a href="#tables">Tabular data</a></li> -->
+</ol>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="buttons">Buttons and links</h2>
+  <div>{{> _links }}</div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint">{{> _links }}</xmp>
+  </details>
+</section>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="formControls">Form controls</h2>
+  <div>{{> _form-controls }}</div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint">{{> _form-controls }}</xmp>
+  </details>
+</section>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="typography">Typography</h2>
+  <div>{{> _typography }}</div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint">{{> _typography }}</xmp>
+  </details>
+</section>
+
+<section class="section-border">
+  <h2 class="heading-xlarge" id="gridSystem">Grid system</h2>
+  <div>{{> _grid-system }}</div>
+  <div class="clearfix"></div>
+  <details>
+    <summary>HTML Snippet</summary>
+    <xmp class="panel-indent prettyprint">{{> _grid-system }}</xmp>
+  </details>
+</section>

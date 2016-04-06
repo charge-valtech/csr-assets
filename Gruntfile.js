@@ -93,6 +93,14 @@ module.exports = function(grunt) {
           ],
         dest: '_compiled/js/vendor/'
       },
+      static: {
+        expand: true,
+        cwd: 'static/',
+        src: [
+          '**/*'
+          ],
+        dest: '_compiled/'
+      },
       ft_assets: {
         expand: true,
         cwd: '_compiled/',
@@ -139,7 +147,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('images', ['imageoptim']);
 
-  grunt.registerTask('default', ['assemble', 'concat:dev', 'copy:vendorjs', 'sass', 'connect', 'watch']);
+  grunt.registerTask('default', ['assemble', 'concat:dev', 'copy:vendorjs', 'copy:static', 'sass', 'connect', 'watch']);
 
   grunt.registerTask('deploy', ['buildcontrol:prototypeheroku']);
 
