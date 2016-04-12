@@ -58,6 +58,17 @@ table {
     .grid:first-child {
       border-right: 1px solid $grey-1;
     }
+    &:hover {
+      .day-confirmed {
+        background: darken($turquoise-50, 20%);
+      }
+      .day-tentative {
+        background: darken($orange-50, 20%);
+      }
+      .day-no-go {
+        background: darken($red-50, 20%);
+      }
+    }
   }
   .bank-holiday {
     position: relative;
@@ -75,12 +86,14 @@ table {
 }
 
 .day-confirmed, .day-tentative, .day-no-go {
+  color: $black;
   padding: 5px;
   text-align: center;
 }
 
 .day-confirmed {
   background: $turquoise-50;
+
 }
 .day-tentative {
   background: $orange-50;

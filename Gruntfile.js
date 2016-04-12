@@ -149,6 +149,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['assemble', 'concat:dev', 'copy:vendorjs', 'copy:static', 'sass', 'connect', 'watch']);
 
-  grunt.registerTask('deploy', ['buildcontrol:prototypeheroku']);
+  grunt.registerTask('build-ft', ['replace:map', 'copy:ft_assets']);
 
 };
