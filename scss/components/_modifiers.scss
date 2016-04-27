@@ -101,6 +101,11 @@
   float: left;
 }
 
+.inline-float-right {
+  clear: none;
+  float: right;
+}
+
 .prewrap {
   white-space: pre-wrap;
 }

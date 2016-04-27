@@ -27,9 +27,19 @@ ul {
 
 .list-checkradio {
   li {
-    margin-bottom: 7px;
+    margin-bottom: 0;
     padding-left: 25px;
     position: relative;
+    &:hover {
+      background: $grey-3;
+    }
+    &.no-hover:hover {
+      background: none;
+    }
+  }
+  label {
+    padding-bottom: 3px;
+    padding-top: 3px;
   }
   &.scrolling-panel {
     input[type="radio"], input[type="checkbox"] {
@@ -40,7 +50,7 @@ ul {
     cursor: pointer;
     margin: 0;
     position: absolute;
-    left: 0; top: 2px;
+    left: 3px; top: 6px;
     + label {
       cursor: pointer;
       display: block;
@@ -59,6 +69,21 @@ ul {
       }
     }
   }
+}
+
+.item-withcontrols {
+  padding-right: 4em;
+  position: relative;
+}
+
+.item-controls {
+  position: absolute;
+  right: 0; top: 0;
+  width: 4em;
+}
+
+.move-up, .move-down {
+  padding: 2px 4px;
 }
 
 .list-withicons {
@@ -119,6 +144,32 @@ ol {
   margin-bottom: 20px;
   @include media(tablet) {
     margin-bottom: 30px;
+  }
+}
+
+.list-number-styled {
+  list-style: none;
+  margin-left: 0;
+  li {
+    counter-increment: item;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 35px;
+    &.sortable-placeholder {
+      counter-increment: none;
+      &:before {
+        content: '';
+        display: none;
+      }
+    }
+    &:before {
+      background: inherit;
+      content: counter(item) ".";
+      display: inline-block;
+      position: absolute; left: 0;
+      text-align: right;
+      width: 30px;
+    }
   }
 }
 

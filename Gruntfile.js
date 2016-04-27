@@ -109,6 +109,14 @@ module.exports = function(grunt) {
           ],
         dest: '../fasttrack-frontend/public/'
       },
+      fta_assets: {
+        expand: true,
+        cwd: '_compiled/',
+        src: [
+          '**/*'
+          ],
+        dest: '../fasttrack-admin-frontend/public/'
+      },
       fs_assets: {
         expand: true,
         cwd: '_compiled/',
@@ -150,5 +158,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['assemble', 'concat:dev', 'copy:vendorjs', 'copy:static', 'sass', 'connect', 'watch']);
 
   grunt.registerTask('build-ft', ['replace:map', 'copy:ft_assets']);
+
+  grunt.registerTask('build-fta', ['replace:map', 'copy:fta_assets']);
 
 };
