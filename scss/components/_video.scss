@@ -1,3 +1,34 @@
 video {
   max-width: 100%;
 }
+
+.video-recording-container {
+  position: relative;
+}
+
+.video-recording-indicator {
+  position: absolute;
+  top: 1em; left: 1em;
+  z-index: 1;
+  text-shadow:
+   -1px -1px 0 $white,
+    1px -1px 0 $white,
+    -1px 1px 0 $white,
+     1px 1px 0 $white;
+}
+
+.recording-video {
+  .fa-video-camera {
+    animation-name: colorCycle;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+  }
+}
+
+@keyframes colorCycle
+{
+  0% {color:$black;}
+  50% {color:$mellow-red;}
+  100% {color:$black;}
+}
+

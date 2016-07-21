@@ -30,6 +30,12 @@ progress[value] {
   }
 }
 
+.page-progress {
+  .lede {
+    color: $grey-1;
+  }
+}
+
 .progress-indicator {
   margin-bottom: 30px;
   ol,
@@ -48,6 +54,7 @@ progress[value] {
   }
   li {
     color: $grey-1;
+    display: inline-block;
     padding: 12px 0 5px 0;
     @media screen and (max-width: 640px) {
       margin-bottom: 0;

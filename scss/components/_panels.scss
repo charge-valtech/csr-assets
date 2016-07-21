@@ -47,6 +47,11 @@
   li, p {
     @include core-16;
   }
+  &.standard-panel {
+    li, p {
+      @include core-19;
+    }
+  }
   p {
     margin-top: $gutter-half;
     margin-bottom: 5px;
@@ -538,5 +543,199 @@ details summary:focus {
   .edit-link {
     visibility: visible;
     margin: 2px 4px;
+  }
+}
+
+.organisation-logo-stacked-single-identity-medium {
+  border-left: 2px solid #af292e;
+  background-image: url(../img/org-crest.png);
+  background-position: 6px top;
+  background-repeat: no-repeat;
+  background-size: auto 25px;
+  color: $black;
+  display: block;
+  font-family: Helvetica, Arial;
+  padding: 20px 0 0 7px;
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    color: $black;
+    text-decoration: underline;
+  }
+  span {
+    display: block;
+    position: relative;
+    top: 6px;
+  }
+}
+
+.organisation-logo-stacked-single-identity-large {
+  border-left: 3px solid #af292e;
+  background-image: url(../img/org-crest-27px.png);
+  background-position: 10px top;
+  background-repeat: no-repeat;
+  color: $black;
+  display: block;
+  font-family: Helvetica, Arial;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 12px;
+  padding: 40px 0 0 7px;
+  position: relative;
+  span {
+    display: block;
+    position: relative;
+    top: 6px;
+  }
+}
+
+.publication-header {
+  background: $light-blue;
+  color: $white;
+  margin-bottom: $gutter;
+  padding: 80px $gutter $gutter;
+  .contents-list {
+    li {
+      margin-bottom: 1px;
+    }
+    a {
+      color: $white;
+    }
+  }
+}
+
+article {
+  section {
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 180px;
+    }
+  }
+}
+
+.contents-link {
+  position: fixed;
+  bottom: 15px;
+}
+
+.schemes-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.scheme-container {
+  margin-bottom: 5px;
+  padding: 6px 6px 6px 3em;
+  position: relative;
+  &.selected-scheme {
+    background: lighten($turquoise-50, 15%);
+  }
+  .block-label {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .no-js & {
+    padding-left: 0;
+    padding-right: 12em;
+  }
+}
+
+.scheme-prefcontainer {
+  position: relative;
+  padding-left: 8em;
+  [data-schemeorder] {
+    position: absolute;
+    left: 0; top: 0;
+    width: 8em;
+  }
+}
+
+.selected-preference {
+  display: inline-block;
+  font-weight: bold;
+  padding-left: 10px;
+  position: absolute;
+  left: 0; top: 50%;
+  margin-top: -0.5em;
+  width: 3em;
+}
+
+.nojs-schemepref {
+  display: none;
+  .no-js & {
+    display: inline-block;
+    height: 100%;
+    padding: 0 0 0 12px;
+    position: absolute;
+    right: 0; top: 6px;
+    width: 12em;
+  }
+}
+
+.scheme-warning {
+  background: lighten($warning-colour, 35%);
+  outline: 1px solid lighten($warning-colour, 15%);
+  padding: 3px 5px;
+  p {
+    margin-bottom: 2px;
+  }
+}
+
+.scheme-wrapper {
+  @include media(tablet) {
+    display: table;
+    width: 100%;
+    .scheme-input-container {
+      display: table-cell;
+      width: 66.6%;
+    }
+    .scheme-info-container {
+      display: table-cell;
+      width: 33.3%;
+    }
+  }
+}
+
+.no-js .scheme-wrapper {
+  .grid-2-3 {
+    width: 100%;
+  }
+}
+
+.scheme-info-container {
+  @include media(tablet) {
+    position: relative;
+  }
+}
+
+#sticky-anchor {
+  position: absolute;
+}
+
+.scheme-info-panel {
+  background: lighten($info-colour, 45%);
+  display: none;
+  margin-top: 5px;
+  margin-bottom: $gutter;
+  outline: 1px solid lighten($info-colour, 20%);
+  padding: $gutter 10px;
+  width: 100%;
+  p {
+    margin-bottom: 2px;
+  }
+  @include media(tablet) {
+    display: inline-block;
+    margin-bottom: 0;
+    position: absolute;
+    width: auto;
+    &.fixed-panel {
+      margin-top: 0;
+      position: fixed;
+      top: 5px;
+    }
+    &.bottom-panel {
+      position: absolute;
+    }
   }
 }

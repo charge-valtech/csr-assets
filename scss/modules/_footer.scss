@@ -45,6 +45,21 @@ footer {
   @media print {
     padding: 0;
   }
+  .heading-medium {
+    color: $black;
+  }
+  .list-text {
+    display: inline-block;
+    margin-right: -4px;
+    li {
+      margin-bottom: 20px;
+    }
+  }
+  hr {
+    border-top: 1px solid $grey-2;
+    border-bottom: 0;
+    margin-bottom: $gutter;
+  }
 }
 
 .footer__nav {

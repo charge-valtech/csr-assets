@@ -73,6 +73,7 @@ ul {
 
 .item-withcontrols {
   padding-right: 4em;
+  padding-left: 1.6em;
   position: relative;
 }
 
@@ -80,6 +81,13 @@ ul {
   position: absolute;
   right: 0; top: 0;
   width: 4em;
+}
+
+.drag-control {
+  color: $grey-1;
+  position: absolute;
+  left: 5px; top: 50%;
+  margin-top: -10px;
 }
 
 .move-up, .move-down {
@@ -138,6 +146,41 @@ ul {
 
 ol {
   margin-left: 25px;
+  &.list-text {
+    margin-left: 0;
+  }
+}
+
+.heading-counter-list {
+  counter-reset: heading;
+}
+
+.heading-counter {
+  &:before {
+    content: counter(heading) ". ";
+    counter-increment: heading;
+  }
+}
+
+.list-number-text {
+  list-style: none;
+  margin-left: 0;
+  li {
+    counter-increment: item;
+    margin-bottom: 10px;
+    &.sortable-placeholder {
+      counter-increment: none;
+      &:before {
+        content: '';
+        display: none;
+      }
+    }
+    .number-text:before {
+      background: inherit;
+      content: "Scheme preference " counter(item);
+      display: inline-block;
+    }
+  }
 }
 
 .list-number {

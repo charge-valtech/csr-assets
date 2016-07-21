@@ -1,3 +1,82 @@
+
+.breadcrumbs {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  @extend %clearfix;
+  ol {
+    margin-left: 0;
+  }
+}
+
+.breadcrumbs li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  font-weight: 400;
+  text-transform: none;
+  float: left;
+  background-image: url(../img/separator.png);
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  list-style: none;
+  margin-left: 0.6em;
+  margin-bottom: 0.4em;
+  padding-left: 0.9em;
+}
+
+@media (min-width: 641px) {
+  .breadcrumbs li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .breadcrumbs li {
+    background-image: url(../img/separator-2x.png);
+    background-size: 6px 11px;
+  }
+}
+
+.breadcrumbs li:first-child {
+  background-image: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.breadcrumbs a {
+  color: #0b0c0c;
+}
+
+.guide-navigation {
+  border-bottom: 1px solid $grey-2;
+  counter-reset: navitem;
+  margin-bottom: $gutter;
+  padding-bottom: $gutter-half;
+  ol {
+    @include copy-16;
+    display: inline-block;
+    list-style: none;
+    margin-left: 0;
+    margin-right: -4px;
+    width: 50%;
+  }
+  li {
+    counter-increment: navitem;
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    position: relative;
+    &:before {
+      content: counter(navitem) '.';
+      padding-right: 5px;
+      position: absolute;
+      left: 0;
+      text-align: right;
+      width: 1.5em;
+    }
+  }
+}
+
 .nav-menu {
   @include core-16;
 }
@@ -164,5 +243,75 @@
   &.active {
     display: inline-block;
   }
+}
+
+.header-nav {
+  list-style-type: none;
+  margin: 0; padding: 0;
+  li {
+    display: inline-block;
+    padding-right: 15px;
+  }
+}
+
+.header-link {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  &.active {
+    color: #1d8feb;
+    &:hover {
+      color: #1d8feb;
+    }
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+.search-bar {
+  position: relative;
+  padding-right: 3.5em;
+  .whitehall-header & {
+    margin: 4px 5px 6px 0;
+  }
+}
+
+.search-lens {
+  align-items: center;
+  background: $govuk-blue;
+  border-left: 1px solid $black;
+  color: $white;
+  display: flex;
+  position: absolute;
+  right: 0; top: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 3.5em; height: 100%;
+  &:hover {
+    background: darken($govuk-blue, 10%);
+    color: darken($white, 10%);
+  }
+  .fa {
+    flex: 1;
+    font-size: 1.7em;
+    margin-right: 0;
+  }
+}
+
+.header-search {
+  border: none;
+  font-size: 16px;
+  padding: 7px 10px;
+  width: 100%;
+}
+
+.header-nav {
+  margin-top: 30px;
+}
+
+::-webkit-input-placeholder {
+   color: $black;
 }
 

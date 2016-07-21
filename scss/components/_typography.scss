@@ -336,6 +336,10 @@ a, .fake-link {
   }
 }
 
+#post-code {
+  text-transform: uppercase;
+}
+
 
 a[rel="external"]:after {
   background-image: url(../img/icon-external.svg);

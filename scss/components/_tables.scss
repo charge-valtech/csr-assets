@@ -37,6 +37,17 @@ table {
       padding-bottom: 8px;
     }
   }
+  .block-label {
+    margin-bottom: 0;
+    padding-right: 10px;
+    padding-left: 2em;
+    width: 100%;
+    position: relative;
+    input {
+      top: 1.1em; left: .6em;
+      position: absolute;
+    }
+  }
 }
 
 .responsive-table {
@@ -44,14 +55,11 @@ table {
 }
 
 .date-table {
-  overflow: hidden;
+  // overflow: hidden;
   th, td {
-    border: 1px solid $grey-1;
+    border-right: 1px solid $grey-1;
     font-size: 12px;
     padding: 5px;
-  }
-  tr:nth-child(odd) {
-    background: $grey-3;
   }
   .grid-wrapper {
     padding: 0;
@@ -69,19 +77,6 @@ table {
         background: darken($red-50, 20%);
       }
     }
-  }
-  .bank-holiday {
-    position: relative;
-  }
-  .bank-holiday:after {
-    content: "";
-    position: absolute;
-    background-color: #ffa;
-    left: 0;
-    top: -5000px;
-    height: 10000px;
-    width: 100%;
-    opacity: 0.5;
   }
 }
 
