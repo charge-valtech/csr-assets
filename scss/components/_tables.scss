@@ -260,6 +260,27 @@ table {
   }
 }
 
+//Preference status cells
+
+.table-preference-status {
+  td, th {
+    border-color: $white;
+    border-width: 5px;
+  }
+}
+
+.preference-status {
+  padding-left: 10px;
+}
+
+.pref-successful {
+  background: rgba($success-colour, 0.2);
+}
+
+.pref-unsuccessful {
+  background: rgba($warning-colour, 0.2);
+}
+
 /**
  * In the HTML above we see several `col` elements with classes whose numbers
  * represent a percentage width for that column. We leave one column free of a

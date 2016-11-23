@@ -151,3 +151,49 @@
   }
 }
 
+.show-annotations {
+  .to-be-removed {
+    background: rgba($error-colour, .3);
+    position: relative;
+    &:after {
+      background: rgba($white, .8);
+      border: 2px solid $error-colour;
+      content: 'TO BE REMOVED';
+      display: inline-block;
+      padding: 5px 4px 2px;
+      position: absolute;
+      top: 5px; right: 5px;
+    }
+  }
+
+  .to-be-changed, .fs-changed {
+    background: rgba($warning-colour, .3);
+    position: relative;
+    &:after {
+      background: rgba($white, .8);
+      border: 2px solid $warning-colour;
+      content: 'TO BE CHANGED';
+      display: inline-block;
+      padding: 5px 4px 2px;
+      position: absolute;
+      top: 5px; right: 5px;
+    }
+    &.fs-changed:after {
+      content: 'FAST STREAM CHANGE';
+    }
+  }
+
+  .to-be-enhanced {
+    background: rgba($success-colour, .3);
+    position: relative;
+    &:after {
+      background: rgba($white, .8);
+      border: 2px solid $success-colour;
+      content: 'TO BE ENHANCED';
+      display: inline-block;
+      padding: 5px 4px 2px;
+      position: absolute;
+      top: 5px; right: 5px;
+    }
+  }
+}
