@@ -642,12 +642,20 @@ article {
 }
 
 .scheme-prefcontainer {
-  position: relative;
-  padding-left: 8em;
   [data-schemeorder] {
-    position: absolute;
-    left: 0; top: 0;
-    width: 8em;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  @include media(tablet) {
+    position: relative;
+    padding-left: 8em;
+    [data-schemeorder] {
+      margin-top: 0;
+      position: absolute;
+      left: 0; top: 0;
+      width: 8em;
+    }
   }
 }
 
@@ -680,6 +688,21 @@ article {
   p {
     margin-bottom: 2px;
   }
+}
+
+.scheme-elegrepeat {
+  position:relative;
+  padding:2px 5.5em 2px 2px;
+}
+
+.scheme-elegrepeat .scheme-remove {
+  position:absolute;
+  right:2px;
+  top:0;
+}
+
+.scheme-elegrepeat:hover {
+  background: $grey-4;
 }
 
 .scheme-wrapper {
