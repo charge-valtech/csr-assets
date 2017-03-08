@@ -9,6 +9,10 @@ legend {
   width: 100%;
 }
 
+legend {
+  float: none !important;
+}
+
 fieldset:first-of-type {
   legend.heading-large, legend.heading-medium {
     margin-top: 0;
@@ -38,6 +42,15 @@ h1,h2,h3,h4,h5,h6 {
     float: right;
     font-weight: normal;
   }
+}
+
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 select {
@@ -108,6 +121,15 @@ input[type='number'] {
 
 [disabled] {
   opacity: 0.5;
+}
+
+.form-saved-container {
+  display: none;
+  position: fixed;
+  bottom: 0; right: $gutter;
+  background: rgba($success-colour, .8);
+  padding: 10px;
+  color: $white;
 }
 
 // Form group is used to wrap label and input pairs

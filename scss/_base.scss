@@ -111,6 +111,14 @@ section {
   }
 }
 
+.break-before {
+  @media print {
+    page-break-before: always;
+    margin-top: 1cm;
+    border-bottom: 0 !important;
+  }
+}
+
 /*
  * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome

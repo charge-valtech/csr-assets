@@ -181,6 +181,7 @@
 
 .scrolling-panel {
   overflow-y: auto;
+  overflow-x: hidden;
   // -webkit-overflow-scrolling: auto;
   &::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -196,14 +197,12 @@
   max-height: 19em; /* 304px */
 }
 
+.max-height-25 {
+  max-height: 31em; /* 304px */
+}
+
 .max-height-6ish {
   max-height: 11em;
-  @media (min-height: 681px) {
-    max-height: 20em;
-  }
-  @media (min-height: 781px) {
-    max-height: 31em;
-  }
 }
 
 // Show & hide links
@@ -215,6 +214,23 @@ details,
 summary {
   display: block;
   // max-width: 30em;
+}
+
+summary::-webkit-details-marker {
+ display: none;
+}
+
+summary::before {
+ content: '\25B6';
+ display: inline-block;
+ padding-right: 0.5em;
+ text-decoration: none;
+}
+
+details[open] > summary::before {
+ content: '\25BC';
+ display: inline-block;
+ padding-right: 0.4em;
 }
 
 details summary {
@@ -252,7 +268,7 @@ details summary:focus {
 }
 
 .summary-style:before {
-  content: '► ';
+  content: '\25B6 ';
   font-size: 16px;
   display: inline-block;
   margin-top: 1px;
@@ -267,7 +283,7 @@ details summary:focus {
 .no-details details.open summary:before,
 .no-details details .detail-content details.open summary:before,
 .summary-style.open:before {
-  content: '▼ ';
+  content: '\25BC ';
 }
 .no-details .open p,
 .no-js details p,
@@ -635,6 +651,11 @@ article {
     margin-bottom: 0;
     width: 100%;
   }
+  .location-distance {
+    color: darken($grey-1, 20%);
+    font-size: .8em;
+    float: right;
+  }
   .no-js & {
     padding-left: 0;
     padding-right: 12em;
@@ -693,6 +714,9 @@ article {
 .scheme-elegrepeat {
   position:relative;
   padding:2px 5.5em 2px 2px;
+  li {
+    list-style-type: disc;
+  }
 }
 
 .scheme-elegrepeat .scheme-remove {
@@ -760,5 +784,21 @@ article {
     &.bottom-panel {
       position: absolute;
     }
+  }
+}
+
+.loading-panel {
+  background: lighten($turquoise-50, 20%);
+  padding: $gutter-half 0 $gutter-half 10px;
+  h3 {
+    margin: 0;
+  }
+}
+
+.noresults-panel {
+  background: lighten($orange-50, 10%);
+  padding: $gutter-half 0 $gutter-half 10px;
+  h3 {
+    margin: 0;
   }
 }

@@ -44,7 +44,7 @@ table {
     width: 100%;
     position: relative;
     input {
-      top: 1.1em; left: .6em;
+      left: .6em;
       position: absolute;
     }
   }
@@ -88,13 +88,28 @@ table {
 
 .day-confirmed {
   background: $turquoise-50;
-
 }
 .day-tentative {
   background: $orange-50;
 }
 .day-no-go {
   background: $red-50;
+}
+
+.is-assessor {
+  .assessment-key {
+    display: none;
+  }
+  .day-confirmed, .day-tentative, .day-no-go {
+    background: $light-blue-50;
+  }
+  .grid-wrapper {
+    &:hover {
+      .day-confirmed, .day-tentative, .day-no-go {
+        background: darken($light-blue-50, 20%);
+      }
+    }
+  }
 }
 
 .rotatedtext {
@@ -279,6 +294,38 @@ table {
 
 .pref-unsuccessful {
   background: rgba($warning-colour, 0.2);
+}
+
+.scores-explanation-table {
+  td {
+    border-bottom: 2px solid $grey-2;
+  }
+  td:first-child {
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .strong-candidate {
+    td {
+      background: rgba($turquoise-25, 1);
+    }
+  }
+  .good-candidate {
+    td {
+      background: rgba($turquoise-25, .8);
+    }
+  }
+  .ok-candidate {
+    td {
+      background: rgba($turquoise-25, .5);
+    }
+  }
+  .unsuitable-candidate {
+    td {
+      background: rgba($turquoise-25, .2);
+    }
+  }
 }
 
 /**
