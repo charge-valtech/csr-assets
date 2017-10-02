@@ -2,6 +2,7 @@
 // Grid layout
 .grid-wrapper {
   @extend %clearfix;
+  // display: flex;
 }
 
 // Grid units take 100% width, unless a .grid-width class is applied
@@ -84,6 +85,10 @@
   @include media(tablet) {
     width: 75%;
   }
+}
+
+.width-all-auto {
+  width: auto !important;
 }
 
 .width-all-1-4 {

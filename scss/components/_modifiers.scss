@@ -44,6 +44,10 @@
   margin-right: .3em;
 }
 
+.small-left-margin {
+  margin-left: .3em;
+}
+
 .no-left-margin {
   margin-left: 0 !important;
 }
@@ -69,6 +73,11 @@
   @include media(tablet) {
     margin-bottom: $gutter;
   }
+}
+
+.flex-items {
+  display: flex;
+  justify-content: space-between;
 }
 
 .inl-block {

@@ -32,6 +32,15 @@
   }
 }
 
+.upload-area {
+  border: 3px dashed $grey-2;
+  margin-left: -5px;
+  padding: 5px;
+  &:hover {
+    border-color: $grey-1;
+  }
+}
+
 %message-panel {
   @extend %clearfix;
   background: $success-background;
@@ -254,7 +263,7 @@ details summary:focus {
 }
 .no-details details > summary:before,
 .no-details details .detail-content details>summary:before {
-  content: '► ';
+  content: '\25BA ';
   font-size: 16px;
   float: left;
   margin-top: 1px;
@@ -268,7 +277,7 @@ details summary:focus {
 }
 
 .summary-style:before {
-  content: '\25B6 ';
+  content: '\25BA ';
   font-size: 16px;
   display: inline-block;
   margin-top: 1px;
@@ -333,6 +342,9 @@ details summary:focus {
   width: 100%;
   @include media(tablet) {
     padding: $gutter;
+  }
+  a {
+    color: $grey-3;
   }
 }
 

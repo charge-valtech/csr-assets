@@ -130,6 +130,13 @@ input[type='number'] {
   background: rgba($success-colour, .8);
   padding: 10px;
   color: $white;
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // Form group is used to wrap label and input pairs

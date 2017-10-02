@@ -48,6 +48,10 @@ table {
       position: absolute;
     }
   }
+  [data-addassessor] {
+    display: block;
+    padding: 5px 0 4px;
+  }
 }
 
 .responsive-table {
@@ -80,20 +84,54 @@ table {
   }
 }
 
-.day-confirmed, .day-tentative, .day-no-go {
+.day-confirmed, .day-tentative, .day-no-go, .day-neutral {
   color: $black;
   padding: 5px;
   text-align: center;
+  details > summary {
+    color: $black;
+    font-size: 13px;
+  }
+  details, summary {
+    margin: 0;
+    text-align: left;
+    ul {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  }
+  details:last-child {
+    margin-top: 5px;
+  }
 }
 
+.assessor-slot-manage {
+  padding: 5px;
+}
+
+.day-neutral {
+  background: $light-blue-50;
+  .slot-availability-selector & {
+    background: $light-blue-25;
+  }
+}
 .day-confirmed {
   background: $turquoise-50;
+  .slot-availability-selector & {
+    background: $turquoise-25;
+  }
 }
 .day-tentative {
   background: $orange-50;
+  .slot-availability-selector & {
+    background: $orange-25;
+  }
 }
 .day-no-go {
   background: $red-50;
+  .slot-availability-selector & {
+    background: $red-25;
+  }
 }
 
 .is-assessor {
@@ -132,6 +170,196 @@ table {
   }
   .week-next {
     text-align: right;
+  }
+}
+
+.availability-table {
+  th {
+    border: 1px solid $grey-1;
+    padding: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+  td {
+    background: $grey-4;
+    border: 1px solid $grey-1;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+  }
+}
+
+.assessor-slots-table {
+  td {
+    vertical-align: top;
+  }
+}
+
+.to-be-added {
+  background: rgba($light-blue-25, .5);
+  .invisible {
+    visibility: visible;
+  }
+}
+
+td.slot-availability-selector {
+  background: none;
+  font-size: 13px;
+  > b {
+    display: block;
+    max-height: 36px;
+    padding: 10px 5px;
+  }
+  .grid {
+    border-right: 1px solid $grey-2;
+    border-top: 1px solid $grey-2;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .grid > span {
+    // color: darken($grey-1, 15%);
+    display: block;
+    padding: 4px;
+  }
+  .day-event:hover {
+    .day-event-title {
+      background: $grey-3;
+    }
+    .day-status {
+      &.day-no-go {
+        background: darken($red-25 , 5%);
+      }
+      &.day-tentative {
+        background: darken($orange-25 , 5%);
+      }
+      &.day-confirmed {
+        background: darken($turquoise-25 , 5%);
+      }
+    }
+  }
+  .day-event-title {
+    background: lighten($grey-3, 10%);
+    color: darken($grey-1, 20%);
+    display: block;
+    font-weight: bold;
+    padding: 5px;
+  }
+  .day-status {
+    border-bottom: 1px solid darken($grey-2, 10%);
+    display: block;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 14px;
+    .fa {
+      font-size: 16px;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .event-status-indicator {
+    color: $black;
+    padding-top: 5px;
+  }
+  .event-status-figure {
+    font-size: 15px;
+    // font-weight: bold;
+    padding: 0 5px;
+    .fa {
+      margin: 0;
+      margin-left: 2px;
+    }
+  }
+  .event-wrapper {
+    background: $grey-3;
+    border-top: 2px solid $grey-2;
+  }
+  .event-title, .event-actions {
+    display: block;
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .event-actions {
+    padding: 0;
+    a {
+      background: $grey-4;
+      display: inline-block;
+      padding: 5px 0;
+      width: 50%;
+      &:hover {
+        background: darken($grey-4, 5%);
+      }
+    }
+  }
+  a.assessor-avail-link {
+    border-top: none;
+    color: $black;
+    .change-availability {
+      color: $link-colour;
+      display: block;
+    }
+  }
+  .assessor-day, .no-status-day {
+    background: $light-blue-25;
+    color: $black !important;
+    &:hover {
+      background: darken($light-blue-25, 10%);
+    }
+  }
+  .empty-day, .day-event {
+    border-top: 2px solid $grey-2;
+    font-size: 12px;
+    padding: 7px 5px 8px;
+    display: block;
+    text-decoration: none;
+  }
+  .day-event {
+    color: $link-colour;
+    &.day-status-wrapper {
+      padding: 0;
+    }
+    &.day-tentative {
+      background: $orange-25;
+      &:hover {
+        background: darken($orange-25 , 5%);
+      }
+    }
+    &.day-confirmed {
+      background: $turquoise-25;
+      &:hover {
+        background: darken($turquoise-25 , 5%);
+      }
+    }
+  }
+  .empty-day {
+    background: $grey-4;
+  }
+  input + label {
+    background: $orange-25;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    padding: 10px 5px;
+    position: relative;
+    width: 100%;
+    &:hover {
+      background: darken($orange-25 , 5%);
+    }
+    &:before {
+      content: 'I\'m unavailable';
+      display: block;
+    }
+  }
+  input:checked + label {
+    background: $turquoise-25;
+    font-weight: 900;
+    &:hover {
+      background: darken($turquoise-25 , 5%);
+    }
+    &:before {
+      content: 'I\'m available';
+    }
   }
 }
 
@@ -338,7 +566,10 @@ table {
 .t5     { width: 5% }
 .t10    { width:10% }
 .t12    { width:12.5% }     /* 1/8 */
+.t14    { width:14% }
 .t15    { width:15% }
+.t16    { width:16.67% }
+.t18    { width:18% }
 .t19    { width:19% }
 .t19-5    { width:19.5% }
 .t20    { width:20% }
